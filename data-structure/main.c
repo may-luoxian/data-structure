@@ -2,14 +2,7 @@
 #include <stdio.h>
 #include "data-type.h"
 
-
-extern void initList(StaticSeqList*);
-extern void printSeqList(StaticSeqList);
 int main() {
-	/*StaticSeqList seq;
-	initList(&seq);
-	printSeqList(seq);*/
-
 	DynamicSeqList seq;
 	initDynaticList(&seq);
 	addData(&seq, 1);
@@ -25,6 +18,10 @@ int main() {
 	addData(&seq, 11);
 	increaseSize(&seq, 5);
 	addData(&seq, 11);
+	
+	int index = LocateElem(&seq, 2);
 	printDynamicSeqList(seq);
+
+	printf("%d", index);
 	return 0;
 }
