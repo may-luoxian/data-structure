@@ -21,6 +21,9 @@
     <ClCompile Include="sequence.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="linked-list.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="data-type.h">

@@ -8,7 +8,7 @@
 
 // 顺序表—静态分配
 // 初始化顺序表
-void initList(StaticSeqList* L) {
+void InitSeqList(StaticSeqList* L) {
 	for (int i = 0; i < MAX_SIZE; i++) {
 		L->data[i] = 0;
 	}
@@ -16,7 +16,7 @@ void initList(StaticSeqList* L) {
 }
 
 // 插入操作
-bool ListInsert(StaticSeqList* L, int i, int e) {
+bool InsertSeqList(StaticSeqList* L, int i, int e) {
 	int length = ARRAY_LENGTH(L->data);
 	if (L->length >= length) {
 		printf("顺序表已满，长度为%d\n", L->length);
@@ -41,7 +41,7 @@ bool ListInsert(StaticSeqList* L, int i, int e) {
 }
 
 // 删除操作
-int ListDelete(StaticSeqList* L, int i) {
+int DeleteSeqList(StaticSeqList* L, int i) {
 	// 判断i是否合法
 	if (i < 0 || i > L->length - 1) {
 		printf("删除操作不合法，i处不存在元素\n");
@@ -62,7 +62,7 @@ int ListDelete(StaticSeqList* L, int i) {
 // 静态顺序表查找操作很简单，不再重复
 
 // 打印顺序表
-void printSeqList(StaticSeqList L) {
+void PrintSeqList(StaticSeqList L) {
 	for (int i = 0; i < L.length; i++) {
 		printf("%d ", L.data[i]);
 	}
@@ -71,14 +71,14 @@ void printSeqList(StaticSeqList L) {
 
 // 顺序表—动态分配
 // 初始化顺序表
-void initDynaticList(DynamicSeqList* L) {
+void InitDynaticSeqList(DynamicSeqList* L) {
 	L->data = (int*)malloc(INIT_SIZE * sizeof(int));
 	L->length = 0;
 	L->MaxSize = INIT_SIZE;
 }
 
 // 增加顺序表长度
-void increaseSize(DynamicSeqList* L, int len) {
+void IncreaseSeqSize(DynamicSeqList* L, int len) {
 	int* p = L->data;
 	int MaxSize = L->MaxSize + len;
 	L->data = (int*)malloc(MaxSize * sizeof(int));
@@ -94,7 +94,7 @@ void increaseSize(DynamicSeqList* L, int len) {
 // 动态分配的增删操作与静态顺序表类似，故不再重复
 
 // 末尾添加数据
-void addData(DynamicSeqList* L, int val) {
+void AddData(DynamicSeqList* L, int val) {
 	if (L->length >= L->MaxSize) {
 		printf("顺序表已满，长度为%d\n", L->length);
 		return;
@@ -124,7 +124,7 @@ int LocateElem(DynamicSeqList* L, int e) {
 }
 
 // 打印顺序表
-void printDynamicSeqList(DynamicSeqList L) {
+void PrintDynamicSeqList(DynamicSeqList L) {
 	for (int i = 0; i < L.length; i++) {
 		printf("%d ", L.data[i]);
 	}
