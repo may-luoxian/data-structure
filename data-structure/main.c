@@ -7,8 +7,9 @@
 int main() {
 	LinkedList L;
 	InitLinkedLeadList(&L);
-	InsertLinkedList(L, 1, 10);
-	InsertLinkedList(L, 1, 5);
+	for (int i = 1; i <= 10; i++) {
+		InsertLinkedList(L, i, i);
+	}
 	PrintLinkedList(L);
 	return 0;
 }
