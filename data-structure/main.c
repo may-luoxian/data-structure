@@ -5,11 +5,8 @@
 #include "data-type.h"
 
 int main() {
-	LinkedList L;
-	InitLinkedLeadList(&L);
-	for (int i = 1; i <= 10; i++) {
-		InsertLinkedList(L, i, i);
-	}
-	PrintLinkedList(L);
+	SLinkedList L;
+	InitSLinked(&L);
+	PrintSLinked(L);
 	return 0;
 }
