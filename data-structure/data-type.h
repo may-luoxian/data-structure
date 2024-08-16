@@ -26,7 +26,7 @@ typedef struct LNode {
 // 双链表
 typedef struct DNode {
 	int data; // 数据域
-	struct DNode *prior, *next; // prior指向前驱，next指向后继
+	struct DNode* prior, * next; // prior指向前驱，next指向后继
 } DoubleNode, * DoubleLinkedList;
 
 // 静态链表-10长度
@@ -34,3 +34,31 @@ typedef struct SNode {
 	int data; // 数据域
 	int next; // 下一个元素的数组下标（游标）
 } SLinkedList[MAX_SIZE];
+
+// 顺序栈-10长度
+typedef struct SStack {
+	int data[MAX_SIZE]; // 静态数组存放栈中元素
+	int top; // 栈顶指针
+} SeqStack;
+
+// 链栈
+typedef struct LStackNode {
+	int data;
+	struct LStackNode* next;
+} *LinkStack;
+
+// 顺序队列
+typedef struct {
+	int data[MAX_SIZE]; // 用静态数组存放队列元素
+	int front, rear; // 对头指针和队尾指针
+} SeqQueue;
+
+// 链式队列
+typedef struct LQNode {  // 链式队列的结点
+	int data;
+	struct LQueueNode* next;
+} LQueueNode;
+
+typedef struct { // 指向队头队尾的指针
+	LQueueNode* front, * rear;
+} LinkQueue;

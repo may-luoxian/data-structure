@@ -5,8 +5,10 @@
 #include "data-type.h"
 
 int main() {
-	SLinkedList L;
-	InitSLinked(&L);
-	PrintSLinked(L);
-	return 0;
+	SeqStack S;
+	InitSeqStack(&S);
+	Push(&S, 1);
+
+	int x = GetTop(S);
+	printf("%d", x);
 }

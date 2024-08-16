@@ -134,7 +134,9 @@
   <ItemGroup>
     <ClCompile Include="linked-list.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="queue.c" />
     <ClCompile Include="sequence.c" />
+    <ClCompile Include="stack.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="data-type.h" />
