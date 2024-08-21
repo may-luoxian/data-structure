@@ -1,6 +1,8 @@
 #pragma once
 #define MAX_SIZE 10 // 静态分配最大长度
 #define INIT_SIZE 10 // 动态分配初始长度
+#define STRING_SIZE 255 // 串的最大长度
+
 // 顺序表结构—静态分配
 typedef struct SSeqLsit {
 	int data[MAX_SIZE]; // 顺序表数据
@@ -62,3 +64,21 @@ typedef struct LQNode {  // 链式队列的结点
 typedef struct { // 指向队头队尾的指针
 	LQueueNode* front, * rear;
 } LinkQueue;
+
+// 串的顺序存储-定长顺序存储
+typedef struct {
+	char ch[STRING_SIZE];
+	int length;
+} SeqString;
+
+// 串的顺序存储-变长顺序存储
+typedef struct {
+	char* ch;
+	int length;
+} HString;
+
+// 串的链式存储
+typedef struct StringNode {
+	char ch;
+	struct StringNode* next;
+} StringNode, * LinkString;

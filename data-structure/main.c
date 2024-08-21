@@ -6,7 +6,15 @@
 #include "data-type.h"
 
 int main() {
-	char str[] = {'(','q', '(', ')', ')'};
-	bool result = bracketCheck(&str, ARRAY_LENGTH(str));
-	printf("%d", result);
+	SeqString S;
+	InitString(&S);
+	strcpy(S.ch, "abcdefgh");
+	S.length = 8;
+	SeqString T;
+	InitString(&T);
+	strcpy(T.ch, "fgh");
+	T.length = 3;
+	/*SubString(&T, S, 2, 3);*/
+	/*PrintString(T);*/
+	int result = StrIndex(S, T);
 }

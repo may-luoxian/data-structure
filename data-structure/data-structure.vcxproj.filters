@@ -30,6 +30,9 @@
     <ClCompile Include="queue.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="string.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="data-type.h">
