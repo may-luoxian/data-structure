@@ -14,7 +14,5 @@ int main() {
 	InitString(&T);
 	strcpy(T.ch, "fgh");
 	T.length = 3;
-	/*SubString(&T, S, 2, 3);*/
-	/*PrintString(T);*/
-	int result = StrIndex(S, T);
+	int result = MatchAlgorithm(S, T);
 }

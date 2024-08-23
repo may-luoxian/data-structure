@@ -59,3 +59,51 @@ int StrIndex(SeqString S, SeqString T) {
 	}
 	return 0;
 }
+
+// 朴素模式匹配算法
+int MatchAlgorithm(SeqString S, SeqString T) {
+	int i = 0, j = 0;
+	while (i < S.length && j < T.length)
+	{
+		if (S.ch[i] == T.ch[j]) {
+			i++;
+			j++;
+		}
+		else {
+			i = i - j + 1;
+			j = 0;
+		}
+	}
+
+	if (j >= T.length) {
+		return i - T.length;
+	}
+	return 0;
+}
+
+// KMP算法
+// KMP算法模式匹配部分
+int Index_KMP(SeqString S, SeqString T, int next[]) {
+	int i = 0, j = 0;
+
+	while (i < S.length && j < T.length)
+	{
+		if (S.ch[i] == T.ch[j]) {
+			i++;
+			j++;
+		}
+		else if (S.ch[i] != T.ch[j] && j == 0) {
+			i++;
+		}
+		else {
+			j = next[j];
+		}
+	}
+
+	if (j >= T.length) {
+		return i - T.length;
+	}
+	return 0;
+}
+
+// KMP算法next数组部分—待解决
