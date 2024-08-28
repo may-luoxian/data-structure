@@ -2,6 +2,7 @@
 #define MAX_SIZE 10 // 静态分配最大长度
 #define INIT_SIZE 10 // 动态分配初始长度
 #define STRING_SIZE 255 // 串的最大长度
+#define TREE_SIZE 100 // 树的最大长度
 
 // 顺序表结构—静态分配
 typedef struct SSeqLsit {
@@ -82,3 +83,25 @@ typedef struct StringNode {
 	char ch;
 	struct StringNode* next;
 } StringNode, * LinkString;
+
+// 二叉树的顺序存储
+typedef struct SeqBinaryTreeNode {
+	int value; // 结点中的数据元素
+	bool isEmpty; // 结点是否为空
+} SeqBinaryTreeNode;
+
+// 二叉树的链式存储结构
+typedef struct LinkBinaryTreeNode {
+	int data; // 数据域
+	struct LinkBinaryTreeNode* lchild, * rchild; // 左右孩子指针
+} LinkBiTNode, *LinkBiTree;
+
+// 二叉链表层序遍历辅助队列
+typedef struct AuxQueueNode {
+	LinkBiTNode* node; // 此处存储指向结点的指针
+	struct AuxQueueNode* next;
+} AuxQueueNode;
+
+typedef struct {
+	AuxQueueNode* front, * rear;
+} AuxQueue;
