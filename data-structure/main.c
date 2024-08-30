@@ -6,8 +6,9 @@
 #include "data-type.h"
 
 int main() {
-	LinkBiTree t;
+	CBiTree t;
 	InitLinkBiTree(&t);
 
 	InsertElements(&t, 10);
+	CreateInThread(t);
 }

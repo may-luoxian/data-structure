@@ -105,3 +105,10 @@ typedef struct AuxQueueNode {
 typedef struct {
 	AuxQueueNode* front, * rear;
 } AuxQueue;
+
+// 线索二叉树
+typedef struct ClueBiTNode {
+	int data;
+	struct ClueBiTNode* lchild, * rchild;
+	int ltag, rtag; // 左、右线索标志，0指向孩子，1指向线索
+} CBitNode, *CBiTree;
