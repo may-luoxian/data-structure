@@ -36,9 +36,24 @@
     <ClCompile Include="Tree.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="graph.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="search.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="data-type.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sequence.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sort.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

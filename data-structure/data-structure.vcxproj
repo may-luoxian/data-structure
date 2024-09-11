@@ -132,16 +132,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="graph.c" />
     <ClCompile Include="linked-list.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="queue.c" />
+    <ClCompile Include="search.c" />
     <ClCompile Include="sequence.c" />
+    <ClCompile Include="sort.c" />
     <ClCompile Include="stack.c" />
     <ClCompile Include="string.c" />
     <ClCompile Include="Tree.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="data-type.h" />
+    <ClInclude Include="sequence.h" />
+    <ClInclude Include="sort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

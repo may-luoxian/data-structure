@@ -6,9 +6,5 @@
 #include "data-type.h"
 
 int main() {
-	CBiTree t;
-	InitLinkBiTree(&t);
-
-	InsertElements(&t, 10);
-	CreateInThread(t);
+	binarySearchTest();
 }

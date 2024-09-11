@@ -5,6 +5,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include "data-type.h"
+#include "sequence.h"
 
 // 顺序表—静态分配
 // 初始化顺序表

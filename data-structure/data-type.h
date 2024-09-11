@@ -3,6 +3,7 @@
 #define INIT_SIZE 10 // 动态分配初始长度
 #define STRING_SIZE 255 // 串的最大长度
 #define TREE_SIZE 100 // 树的最大长度
+#define MAX_VERTEM_NUM 100 // 图的顶点数目
 
 // 顺序表结构—静态分配
 typedef struct SSeqLsit {
@@ -112,3 +113,33 @@ typedef struct ClueBiTNode {
 	struct ClueBiTNode* lchild, * rchild;
 	int ltag, rtag; // 左、右线索标志，0指向孩子，1指向线索
 } CBitNode, *CBiTree;
+
+// 图的邻接矩阵存储
+typedef struct {
+	char vex[MAX_VERTEM_NUM]; // 顶点表
+	int edge[MAX_VERTEM_NUM][MAX_VERTEM_NUM]; // 邻接矩阵，边表
+	int vexnum, arcnum; // 图的当前顶点数和边数/弧数
+} MGraph;
+
+// 图的邻接表存储
+// 边以链表方式存储
+typedef struct ArcNode {
+	int adjvex; // 边/弧指向哪个结点
+	struct ArcNode* next; // 指向下一边或弧的指针
+	// 边权值
+} ArcNode;
+
+// 顶点以顺序数组方式存储
+typedef struct VNode {
+	char vex; // 顶点信息
+	ArcNode* first; // 指向第一个边/弧
+}VNode, AdjList[MAX_VERTEM_NUM];
+
+typedef struct {
+	AdjList vertices;
+	int vexnum, arcnum; // 图的当前顶点数和边数/弧数
+} AlGraph;
+
+
+
+
