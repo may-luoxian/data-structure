@@ -8,6 +8,7 @@
 #include "data-type.h"
 #include "sequence.h"
 #include "sort.h"
+#include "search.h"
 
 void initValue(DynamicSeqList* sl) {
 	srand(time(NULL));

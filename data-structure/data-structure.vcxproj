@@ -145,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="data-type.h" />
+    <ClInclude Include="search.h" />
     <ClInclude Include="sequence.h" />
     <ClInclude Include="sort.h" />
   </ItemGroup>

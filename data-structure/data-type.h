@@ -140,6 +140,13 @@ typedef struct {
 	int vexnum, arcnum; // 图的当前顶点数和边数/弧数
 } AlGraph;
 
-
+// 红黑树
+typedef struct RBnode {
+	int key; // 关键字的值
+	struct RBnode* parent; // 父节点指针
+	struct RBnode* lchild; // 左孩子指针
+	struct RBnode* rchild; // 右孩子指针
+	int color; // 结点颜色 0/1 表示黑/红
+} RBnode;
 
 
